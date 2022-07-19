@@ -53,3 +53,18 @@ rewrite /about_page /about.html;
 location / {
     proxy_pass "https://nginx.org/";
 }    
+
+# add_header syntax
+#server block
+server {
+   listen 80;
+   ...
+   add_header X-Frame-Options SAMEORIGIN;
+   ...
+}
+# location block
+location / {
+   ...
+   add_header X-Frame-Options SAMEORIGIN;
+   ...
+}
