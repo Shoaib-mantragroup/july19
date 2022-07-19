@@ -53,3 +53,9 @@ rewrite /about_page /about.html;
 location / {
     proxy_pass "https://nginx.org/";
 }    
+
+## about progy_set_header and its syntax
+
+proxy_set_header <header name> <header value>
+
+##To adjust or set headers for proxied connections
